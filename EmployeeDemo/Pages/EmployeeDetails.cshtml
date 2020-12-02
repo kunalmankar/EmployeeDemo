@@ -1,0 +1,40 @@
+﻿@page
+@model EmployeeDetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.employee.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.employee.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.employee.Gender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.employee.Gender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.employee.Department)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.employee.Department)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.employee.City)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.employee.City)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./EditEmployee" asp-route-id="@Model.employee.ID">Edit</a> |
+    <a asp-page="./EmployeeIndex">Back to List</a>
+</div>
